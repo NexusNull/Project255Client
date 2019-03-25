@@ -1,7 +1,7 @@
 /**
  * Created by Nexus on 15.08.2017.
  */
-var JobEnum = require("./JobEnum");
+var JobEnum = require("../Enum/JobEnum");
 var Job = require("./Job");
 
 var JobFactory = function(){

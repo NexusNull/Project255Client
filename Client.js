@@ -10,4 +10,10 @@ Client.prototype.addEntity = function(entity){
     this.entities[entity.id] = entity;
 };
 
+Client.prototype.accessible = function(){
+    return {
+        id:this.id,
+    }
+};
+
 module.exports = Client;

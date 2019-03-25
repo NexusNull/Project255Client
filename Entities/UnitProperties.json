@@ -1,0 +1,202 @@
+{
+  "0": {
+    "name": "commander",
+    "articles": "a",
+    "maxHealth": 10000,
+    "powerPerTick": 100,
+    "powerStore": 5000,
+    "inventorySize": 100,
+    "jobCost": {
+      "0": {
+        "time": 0,
+        "allowed": true
+      },
+      "1": {
+        "time": 3,
+        "allowed": true
+      },
+      "2": {
+        "time": 5,
+        "allowed": true
+      },
+      "3": {
+        "time": 15,
+        "allowed": true
+      },
+      "4": {
+        "time": 40,
+        "allowed": true
+      },
+      "5": {
+        "time": 20,
+        "allowed": true
+      },
+      "6": {
+        "time": 3,
+        "allowed": true
+      },
+      "7": {
+        "time": 3,
+        "allowed": true
+      },
+      "8": {
+        "time": 5,
+        "allowed": true
+      },
+      "9": {
+        "time": 10,
+        "allowed": true
+      }
+    }
+  },
+  "1": {
+    "name": "builder",
+    "articles": "a",
+    "maxHealth": 100,
+    "powerPerTick": -3,
+    "powerStore": 600,
+    "inventorySize": 30,
+    "jobCost": {
+      "0": {
+        "time": 0,
+        "allowed": true
+      },
+      "1": {
+        "time": 1,
+        "allowed": true
+      },
+      "2": {
+        "time": 2,
+        "allowed": true
+      },
+      "3": {
+        "time": 0,
+        "allowed": false
+      },
+      "4": {
+        "time": 25,
+        "allowed": true
+      },
+      "5": {
+        "time": 15,
+        "allowed": true
+      },
+      "6": {
+        "time": 2,
+        "allowed": true
+      },
+      "7": {
+        "time": 2,
+        "allowed": true
+      },
+      "8": {
+        "time": 0,
+        "allowed": false
+      },
+      "9": {
+        "time": 0,
+        "allowed": false
+      }
+    }
+  },
+  "3": {
+    "name": "miner",
+    "articles": "a",
+    "maxHealth": 200,
+    "powerPerTick": -4,
+    "powerStore": 1200,
+    "inventorySize": 150,
+    "jobCost": {
+      "0": {
+        "time": 0,
+        "allowed": true
+      },
+      "1": {
+        "time": 1,
+        "allowed": true
+      },
+      "2": {
+        "time": 2,
+        "allowed": true
+      },
+      "3": {
+        "time": 15,
+        "allowed": true
+      },
+      "4": {
+        "time": 20,
+        "allowed": true
+      },
+      "5": {
+        "time": 0,
+        "allowed": false
+      },
+      "6": {
+        "time": 2,
+        "allowed": true
+      },
+      "7": {
+        "time": 2,
+        "allowed": true
+      },
+      "8": {
+        "time": 0,
+        "allowed": false
+      },
+      "9": {
+        "time": 5,
+        "allowed": true
+      }
+    }
+  },
+  "4": {
+    "name": "powerDistributor",
+    "articles": "a",
+    "maxHealth": 100,
+    "powerPerTick": -4,
+    "powerStore": 20000,
+    "inventorySize": 0,
+    "jobCost": {
+      "0": {
+        "time": 0,
+        "allowed": true
+      },
+      "1": {
+        "time": 1,
+        "allowed": true
+      },
+      "2": {
+        "time": 2,
+        "allowed": true
+      },
+      "3": {
+        "time": 15,
+        "allowed": false
+      },
+      "4": {
+        "time": 0,
+        "allowed": false
+      },
+      "5": {
+        "time": 0,
+        "allowed": false
+      },
+      "6": {
+        "time": 0,
+        "allowed": false
+      },
+      "7": {
+        "time": 0,
+        "allowed": false
+      },
+      "8": {
+        "time": 0,
+        "allowed": false
+      },
+      "9": {
+        "time": 0,
+        "allowed": false
+      }
+    }
+  }
+}

@@ -52,6 +52,32 @@ World.prototype.removeEntity = function (entity) {
     delete this.entities[entity.id];
 };
 
+World.prototype.accessible = function () {
+    let chunks = {};
+    let entities = [];
+
+    for (let id in this.chunks) {
+        chunks[id] = this.chunks[id].accessible();
+    }
+    for(let id in this.entities){
+        if(typeof this.entities[id].accessible != "function")
+            console.log(this.entities[id])
+        entities.push(this.entities[id].accessible());
+    }
+    return {
+        chunks: chunks,
+        entities: entities,
+        tick: this.tick,
+        name: this.name,
+    };
+};
+
+/**
+ * Returns Tile at position
+ * @param {number} x
+ * @param {number} y
+ * @returns {Tile}
+ */
 World.prototype.getTileAt = function (x, y) {
     var chunk = this.chunks[Math.floor(x / 32) + " " + Math.floor(y / 32)];
     if (chunk) {

@@ -13,5 +13,19 @@ var Tile = function (type, resourceType, resourceAmount, content) {
     this.occupant = null;
 };
 
+/**
+ * Thanks to Deeredman1991
+ * @returns {{type: *, resourceType: *, resourceAmount: *, content: *}}
+ */
+Tile.prototype.accessible = function () {
+    return {
+        id: this.id,
+        type: this.type,
+        resourceType: this.resourceType,
+        resourceAmount: this.resourceAmount,
+        content: this.content,
+    }
+};
+
 
 module.exports = Tile;

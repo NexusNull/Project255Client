@@ -2,19 +2,22 @@
  * Created by Nexus on 13.08.2017.
  */
 
-var autoIncrement = 1;
+var autoIncrement = 0;
 
-var Entity = function (owner, id,  health, maxHealth, power, maxPower) {
-    this.id = id;
+var Entity = function (owner, maxHealth, maxPower, inventorySize) {
+    this.id = autoIncrement++;
     this.owner = owner;
 
     owner.addEntity(this);
 
-    this.health = health;
+    this.health = maxHealth;
     this.maxHealth = maxHealth;
 
-    this.power = power;
+    this.power = maxPower;
     this.maxPower = maxPower;
+
+    this.inventory = {};
+    this.inventorySize = inventorySize;
 
     //Entities don't exist in the world when they are created, they are added to a world at a later point.
     //For Future support of multiple worlds.
@@ -44,7 +47,6 @@ Entity.prototype.setPosition = function (world, x, y, direction) {
     this.x = x;
     this.y = y;
     this.direction = direction;
-
 };
 
 Entity.prototype.setOwner = function(owner){
@@ -59,5 +61,26 @@ Entity.getAutoIncrement = function(){
     return autoIncrement
 };
 
+Entity.accessible = function (entity) {
+    return {
+        ownerId: entity.owner.id,
 
+        id: entity.id,
+
+        health: entity.health,
+        maxHealth: entity.maxHealth,
+        power: entity.power,
+        maxPower: entity.maxPower,
+
+        type: "entity",
+        x: entity.x,
+        y: entity.y,
+        direction: entity.direction,
+        worldName: (entity.world) ? entity.world.name : null,
+    }
+};
+
+Entity.prototype.accessible = function () {
+    return Entity.accessible(this);
+};
 module.exports = Entity;
